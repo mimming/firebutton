@@ -13,13 +13,6 @@ board.on("ready", function () {
   var button = new five.Button("P1-16");
   var buttonLed = new five.Led("P1-18");
 
-  // Export them to the board. Whee!
-//  this.repl.inject({
-//    buttonLed: buttonLed,
- //   button: button
-  //});
-
-
   button.on("up", function () {
     firebaseRef.set(false);
   });
@@ -28,13 +21,13 @@ board.on("ready", function () {
     firebaseRef.set(true);
   });
 
-//  firebaseRef.on("value", function (snapshot) {
-//    var buttonValue = snapshot.val();
-//    if (buttonValue) {
-//      buttonLed.on();
-//    } else {
-//      buttonLed.off();
-//    }
-//  });
+  firebaseRef.on("value", function (snapshot) {
+    var buttonValue = snapshot.val();
+    if (buttonValue) {
+      buttonLed.on();
+    } else {
+      buttonLed.off();
+    }
+  });
 
 });
