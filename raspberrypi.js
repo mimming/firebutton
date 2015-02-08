@@ -28,13 +28,13 @@ board.on("ready", function () {
     firebaseRef.set(true);
   });
 
-  firebaseRef.on("value", function (snapshot) {
-    var buttonValue = snapshot.val();
-    if (buttonValue) {
-      buttonLed.on();
-    } else {
-      buttonLed.off();
-    }
-  });
+//  firebaseRef.on("value", function (snapshot) {
+//    var buttonValue = snapshot.val();
+//    if (buttonValue) {
+//      buttonLed.on();
+//    } else {
+//      buttonLed.off();
+//    }
+//  });
 
 });
