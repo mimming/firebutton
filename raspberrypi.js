@@ -10,8 +10,8 @@ var board = new five.Board({
 var firebaseRef = new Firebase("https://dinosaurs.firebaseio.com/button");
 
 board.on("ready", function () {
-  var button = new five.Button("P1-16");
-  var buttonLed = new five.Led("P1-18");
+  var button = new five.Button("4");
+  var buttonLed = new five.Led("5");
 
   button.on("up", function () {
     firebaseRef.set(false);
@@ -29,5 +29,4 @@ board.on("ready", function () {
       buttonLed.off();
     }
   });
-
 });
