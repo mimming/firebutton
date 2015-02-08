@@ -12,6 +12,6 @@ board.on("ready", function () {
 
   board.pins[board.normalize(5)].value = board.HIGH;
 
-  console.log(board.pins[board.normalize(5)].value); 
+  //console.log(board.pins[board.normalize(5)].value); 
 
 });
