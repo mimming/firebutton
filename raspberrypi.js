@@ -10,8 +10,8 @@ var board = new five.Board({
 var firebaseRef = new Firebase("https://dinosaurs.firebaseio.com/button");
 
 board.on("ready", function () {
-  var button = new five.Button(16);
-  var buttonLed = new five.Led(18);
+  var button = new five.Button("GPIO23");
+  var buttonLed = new five.Led("GPIO24");
 
   // Export them to the board. Whee!
   this.repl.inject({
