@@ -10,8 +10,11 @@ var board = new five.Board({
 var firebaseRef = new Firebase("https://dinosaurs.firebaseio.com/button");
 
 board.on("ready", function () {
-  var button = new five.Button("4");
-  var buttonLed = new five.Led("5");
+  var button = new five.Button(4);
+  var buttonLed = new five.Led(5);
+  
+  board.pinMode(5, board.MODES.OUTPUT);
+
 
   button.on("up", function () {
     firebaseRef.set(false);
