@@ -1,7 +1,12 @@
-var five = require("raspi-io");
+var raspi = require('raspi-io');
+var five = require('johnny-five');
+
 var Firebase = require("firebase");
 
-var board = new five.Board();
+var board = new five.Board({
+  io: new raspi()
+});
+
 var firebaseRef = new Firebase("https://dinosaurs.firebaseio.com/button");
 
 board.on("ready", function () {
@@ -15,21 +20,21 @@ board.on("ready", function () {
   });
 
 
-  button.on("up", function() {
+  button.on("up", function () {
     firebaseRef.set(false);
   });
 
-  button.on("down", function() {
+  button.on("down", function () {
     firebaseRef.set(true);
   });
-  
-  firebaseRef.on("value", function(snapshot) {
+
+  firebaseRef.on("value", function (snapshot) {
     var buttonValue = snapshot.val();
-    if(buttonValue) {
+    if (buttonValue) {
       buttonLed.on();
     } else {
       buttonLed.off();
     }
   });
-  
+
 });
