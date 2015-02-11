@@ -3,7 +3,7 @@ var Firebase = require("firebase");
 
 var board = new five.Board();
 
-var firebaseRef = new Firebase("https://dinosaurs.firebaseio.com/button");
+var firebaseRef = new Firebase("https://firebutton.firebaseio-demo.com/button");
 
 board.on("ready", function () {
   var button = new five.Button(13);
