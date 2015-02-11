@@ -8,8 +8,7 @@ var firebaseRef = new Firebase("https://firebutton.firebaseio-demo.com/button");
 board.on("ready", function () {
   var servo = new five.Servo(10);
   var button = new five.Button(13);
-  //var buttonLed = new five.Led(8);
-servo.sweep();
+  var buttonLed = new five.Led(8);
   
   button.on("up", function () {
     firebaseRef.set(false);
@@ -23,11 +22,10 @@ servo.sweep();
     var buttonValue = snapshot.val();
     if (buttonValue) {
       console.log("sweeping servo");
-      servo.sweep();
-      //servo.to(90);
-      //setTimeout(function() {
-      //  servo.to(80);
-      //}, 500);
+      servo.to(180);
+      setTimeout(function() {
+        servo.to(0);
+      }, 1000);
     } 
   });
 });
