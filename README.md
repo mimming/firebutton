@@ -20,6 +20,8 @@ It's a button. When you press it, something changes in Firebase. The possibiliti
        ![wiring](/wiring.jpg)
 0. Install node.js, Johnny-Five, and Firebase on to your Pi 
 0. Copy `uno.js` to your Pi, and run it
+
+
        $ node uno.js
 
 ## License
