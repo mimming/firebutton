@@ -19,7 +19,8 @@ It's a button. When you press it, something changes in Firebase. The possibiliti
 0. Wire up the circuit
        ![wiring](/wiring.jpg)
 0. Install node.js, Johnny-Five, and Firebase on to your Pi 
-0. Copy `uno.js` to your Pi, and run it
+0. Open `/player/index.html` in your web browser.
+0. Copy `uno.js` to your Pi, and run it. Hit the button whenever you need to see that video :)
 
 
        $ node uno.js
