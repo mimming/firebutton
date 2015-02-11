@@ -17,7 +17,7 @@ It's a button. When you press it, something changes in Firebase. The possibiliti
 0. Get a Raspberry Pi and an Arduino Uno
 0. Put StandardFirmata on the Uno
 0. Wire up the circuit
-       ![wiring](/wiring.png)
+       ![wiring](/wiring.jpg)
 0. Install node.js, Johnny-Five, and Firebase on to your Pi 
 0. Copy `uno.js` to your Pi, and run it
        $ node uno.js
